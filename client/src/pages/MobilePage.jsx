@@ -3,6 +3,7 @@ import { mobileData } from "../data/mobiles";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const MobilePage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -47,6 +48,7 @@ const MobilePage = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

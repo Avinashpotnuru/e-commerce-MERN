@@ -3,7 +3,7 @@ import { womanData } from "../data/woman";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
-
+import Footer from "../components/Footer";
 const WomanPage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
 
@@ -47,6 +47,7 @@ const WomanPage = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

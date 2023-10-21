@@ -3,6 +3,7 @@ import { kitchenData } from "../data/kitchen";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const KitchenPage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -21,13 +22,13 @@ const KitchenPage = () => {
       : kitchenData.filter((orange) => selectedProduct.includes(orange.brand));
 
   return (
-    <>
+    <div className="main">
       <Navbar />
       <div className="fullpage">
         <div className="pro-selected">
-          {kitchenData.map((phone) => {
+          {kitchenData.map((phone, idx) => {
             return (
-              <div className="pro-input">
+              <div key={idx} className="pro-input">
                 <label>
                   <input
                     type="checkbox"
@@ -47,7 +48,8 @@ const KitchenPage = () => {
           })}
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

@@ -3,6 +3,7 @@ import { furnitureData } from "../data/furniture";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const FurniturePage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -23,7 +24,7 @@ const FurniturePage = () => {
         );
 
   return (
-    <div className="">
+    <div className="main">
       <Navbar />
       <div className="fullpage">
         <div className="pro-selected">
@@ -49,6 +50,7 @@ const FurniturePage = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

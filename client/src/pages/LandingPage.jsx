@@ -1,13 +1,17 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
+import Footer from "../components/Footer";
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
+    <>
       <Navbar />
-      <Products />
-    </div>
+      <div className="landing-page">
+        <Products />
+      </div>
+      <Footer />
+    </>
   );
 };
 

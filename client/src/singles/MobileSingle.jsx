@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 import { useCart } from "../context/CartContext";
+import Footer from "../components/Footer";
 
 const MobileSingle = () => {
   const { id } = useParams();
@@ -35,6 +36,7 @@ const MobileSingle = () => {
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

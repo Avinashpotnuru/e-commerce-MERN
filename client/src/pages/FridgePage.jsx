@@ -47,6 +47,7 @@ const FridgePage = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

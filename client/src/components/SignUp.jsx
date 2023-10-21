@@ -98,7 +98,7 @@ const SignUp = () => {
       <div className="form-group">
         <label htmlFor="email">Password</label>
         <input
-          type="text"
+          type="password"
           id="password"
           name="password"
           value={password}
@@ -111,7 +111,7 @@ const SignUp = () => {
       <div className="form-group">
         <label htmlFor="email">confirm password</label>
         <input
-          type="text"
+          type="password"
           id="confirmpassword"
           name="confirmpassword"
           maxLength={8}

@@ -86,57 +86,59 @@ const Login = () => {
   }
 
   return (
-    <div className="login-container">
-      <div className="tabs">
-        <h4
-          style={{ textDecoration: tab === 1 ? "underline" : "" }}
-          onClick={() => active(1)}
-        >
-          login
-        </h4>
-        <h4
-          style={{ textDecoration: tab === 2 ? "underline" : "" }}
-          onClick={() => active(2)}
-        >
-          signup
-        </h4>
-      </div>
+    <>
+      <div className="login-container">
+        <div className="tabs">
+          <h4
+            style={{ textDecoration: tab === 1 ? "underline" : "" }}
+            onClick={() => active(1)}
+          >
+            login
+          </h4>
+          <h4
+            style={{ textDecoration: tab === 2 ? "underline" : "" }}
+            onClick={() => active(2)}
+          >
+            signup
+          </h4>
+        </div>
 
-      {tab === 1 ? (
-        <form onSubmit={LoginSubmitHandler}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={loginEventHandler}
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="username">Password</label>
-            <input
-              type="text"
-              id="password"
-              name="password"
-              value={password}
-              maxLength={8}
-              onChange={loginEventHandler}
-              placeholder="Enter your password"
-              required
-            />
-          </div>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          {reserror && <p style={{ color: "red" }}>{reserror}</p>}
-          <button type="submit">Login</button>
-        </form>
-      ) : (
-        <SignUp />
-      )}
-    </div>
+        {tab === 1 ? (
+          <form onSubmit={LoginSubmitHandler}>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={loginEventHandler}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="username">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                maxLength={8}
+                onChange={loginEventHandler}
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            {reserror && <p style={{ color: "red" }}>{reserror}</p>}
+            <button type="submit">Login</button>
+          </form>
+        ) : (
+          <SignUp />
+        )}
+      </div>
+    </>
   );
 };
 

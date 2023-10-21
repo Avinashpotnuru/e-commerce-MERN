@@ -3,6 +3,7 @@ import { acData } from "../data/ac";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const AcPage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -47,6 +48,7 @@ const AcPage = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

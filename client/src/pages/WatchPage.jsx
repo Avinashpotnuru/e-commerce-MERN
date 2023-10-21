@@ -3,6 +3,7 @@ import { watchData } from "../data/watch";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const WatchPage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -21,7 +22,7 @@ const WatchPage = () => {
       : watchData.filter((orange) => selectedProduct.includes(orange.brand));
 
   return (
-    <>
+    <div className="main">
       <Navbar />
       <div className="fullpage">
         <div className="pro-selected">
@@ -47,7 +48,8 @@ const WatchPage = () => {
           })}
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

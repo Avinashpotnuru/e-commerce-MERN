@@ -77,7 +77,7 @@ app.post("/login", async (req, res) => {
         id: exist.id,
       },
     };
-    jwt.sign(payload, "jwtSecret", { expiresIn: 3600000 }, (err, token) => {
+    jwt.sign(payload, "jwtSecret", { expiresIn: "10h" }, (err, token) => {
       if (err) throw err;
       return res.json({ token, message: "You are login successfully" });
     });
