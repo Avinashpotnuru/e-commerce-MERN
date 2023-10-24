@@ -3,6 +3,7 @@ import { menData } from "../data/men";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const MenPage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);

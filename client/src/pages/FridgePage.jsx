@@ -3,6 +3,7 @@ import { fridgeData } from "../data/fridge";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import Footer from "../components/Footer";
 
 const FridgePage = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -25,9 +26,9 @@ const FridgePage = () => {
       <Navbar />
       <div className="fullpage">
         <div className="pro-selected">
-          {fridgeData.map((phone) => {
+          {fridgeData.map((phone, idx) => {
             return (
-              <div className="pro-input">
+              <div key={idx} className="pro-input">
                 <label>
                   <input
                     type="checkbox"

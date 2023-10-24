@@ -28,9 +28,9 @@ const CompPage = () => {
       <Navbar />
       <div className="fullpage">
         <div className="pro-selected">
-          {computerData.map((phone) => {
+          {computerData.map((phone, idx) => {
             return (
-              <div className="pro-input">
+              <div key={idx} className="pro-input">
                 <label>
                   <input
                     type="checkbox"
